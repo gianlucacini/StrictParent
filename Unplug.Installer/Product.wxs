@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" >
+  <Product Id="{498F286A-0A6B-47FE-9DB6-FF69FA3982FC}" Name="Unplug by QuitSurf" Language="1033" Version="0.90.0.0" Manufacturer="Gianluca Cini" UpgradeCode="c9eef993-f742-480a-a978-18c60de86d68">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <UIRef Id="WixUI_Minimal" />
+    <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+
+    <!-- TARGET DIRECTORY -->
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLDIR" Name="Unplug" />
+      </Directory>
+
+      <!-- DESKTOP SHORTCUT -->
+
+      <Directory Id="DesktopFolder" Name="Desktop">
+        <Component Id="ApplicationShortcutDesktop" Guid="{86EA5281-2BBF-49CA-B101-5087C1675705}">
+          <Shortcut Id="ApplicationDesktopShortcut"
+              Name="Unplug Settings"
+              Description="Unplug Internet Blocker By QuitSurf"
+              Target="[INSTALLDIR]Unplug.UI.exe"
+              WorkingDirectory="INSTALLDIR"/>
+          <RemoveFolder Id="DesktopFolder" On="uninstall"/>
+
+
+          <RegistryValue
+              Root="HKCU"
+              Key="SOFTWARE/Unplug"
+              Name="installed"
+              Type="integer"
+              Value="1"
+              KeyPath="yes"/> 
+        </Component>
+      </Directory>
+    </Directory>
+
+    <Icon Id="qsicon.ico" SourceFile="qsicon.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="qsicon.ico" />
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLDIR">
+
+      <Component Id="qsicon.ico" Guid="{04E64F04-1A7C-45B8-B338-B0758B991612}" >
+        <File Id="qsicon.ico" Name="qsicon.ico" Source="qsicon.ico" KeyPath="yes" />
+      </Component>
+      
+      <!-- Exes-->
+
+      <Component Id="Unplug.UI.exe" Guid="{D9824839-35C7-4D11-BDFD-6C5D1639EC9E}" >
+        <File Id="Unplug.UI.exe" Name="Unplug.UI.exe" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Unplug.Service.exe" Guid="{F0051401-121C-493A-AB06-F6ECF5601CCF}" >
+        <File Id="Unplug.Service.exe" Name="Unplug.Service.exe" Source="..\Unplug.Service\bin\Release\" KeyPath="yes" />
+        <ServiceInstall Id="ServiceInstaller" Type="ownProcess" Name="Unplug Service" DisplayName="Unplug Service" Vital="yes"
+              Description="Unplug Internet Blocker By QuitSurf" Start="auto" Account="LocalSystem" ErrorControl="normal"/>
+        <ServiceControl Id="StartService" Start="install" Stop="both" Remove="uninstall" Name="Unplug Service" Wait="yes" />
+      </Component>
+
+      <!-- Key Dlls -->
+
+      <Component Id="Unplug.Common.dll" Guid="{675C9DB3-4789-4C4B-80B4-D12DA4B99757}" >
+        <File Id="Unplug.Common.dll" Name="Unplug.Common.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Unplug.BusinessLayer.dll" Guid="{FC3EAB04-FDFF-4683-B688-15C46D9198F4}" >
+        <File Id="Unplug.BusinessLayer.dll" Name="Unplug.BusinessLayer.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Unplug.DataAccess.dll" Guid="{E9B00F13-EB35-49F0-A81D-3A14CFC7D32F}" >
+        <File Id="Unplug.DataAccess.dll" Name="Unplug.DataAccess.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Serilog.dll" Guid="{83E564E4-3AFE-4E2A-8ADE-F1CC769A4289}" >
+        <File Id="Serilog.dll" Name="Serilog.dll" Source="..\Unplug.Service\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Serilog.Sinks.File.dll" Guid="{D14D99B7-A83E-4F55-909D-7071ADEBE8E2}" >
+        <File Id="Serilog.Sinks.File.dll" Name="Serilog.Sinks.File.dll" Source="..\Unplug.Service\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <!--Data-->
+
+      <Component Id="Unplug.Data.xml" Guid="{ABE7D179-DE4A-4B56-8EB1-BD8546A439F6}" >
+        <File Id="Unplug.Data.xml" Name="Unplug.Data.xml" Source="..\Unplug.Service\bin\Release\" KeyPath="yes" />
+      </Component>
+      
+      
+      <!-- Ui Components -->
+
+
+      <Component Id="Xceed.Wpf.AvalonDock.dll" Guid="{04752E3D-DE5D-42EE-8EED-7CD91F90F0C0}" >
+        <File Id="Xceed.Wpf.AvalonDock.dll" Name="Xceed.Wpf.AvalonDock.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+      
+      <Component Id="Xceed.Wpf.AvalonDock.Themes.Aero.dll" Guid="{DF68C1E1-047F-44F8-A0FD-603B3FD27458}" >
+        <File Id="Xceed.Wpf.AvalonDock.Themes.Aero.dll" Name="Xceed.Wpf.AvalonDock.Themes.Aero.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Xceed.Wpf.AvalonDock.Themes.Metro.dll" Guid="{8FDF4B07-08D1-45F4-BBD4-16A3CD4EC1B2}" >
+        <File Id="Xceed.Wpf.AvalonDock.Themes.Metro.dll" Name="Xceed.Wpf.AvalonDock.Themes.Metro.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" Guid="{8E812E4D-678D-4880-8760-9C814253AC3C}" >
+        <File Id="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" Name="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+
+      <Component Id="Xceed.Wpf.Toolkit.dll" Guid="{1828B74F-1732-4AE3-8A40-A8C02A742DA6}" >
+        <File Id="Xceed.Wpf.Toolkit.dll" Name="Xceed.Wpf.Toolkit.dll" Source="..\Unplug.UI\bin\Release\" KeyPath="yes" />
+      </Component>
+   
+
+      <!-- REGISTRY ENTRY FOR Unplug ADMIN PRIVILEGES -->
+
+      <Component Id="RegistryEntryForUnplug" Guid="{77F216D2-6815-4DFF-BF9D-87500034D7F7}" Win64="yes">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" >
+          <RegistryValue Id="unplugLocation" Action="write" Type="string" Name="[INSTALLDIR]Unplug.Service.exe" Value="~ RUNASADMIN" KeyPath="yes" />
+        </RegistryKey>
+      </Component>
+
+    </ComponentGroup>
+
+
+    <!-- REFERENCE EVERY COMPONENT -->
+
+    <Feature Id="ProductFeature" Title="Unplug" Level="1">
+      <ComponentRef Id="Unplug.UI.exe" />
+      <ComponentRef Id="Unplug.Service.exe" />
+      <ComponentRef Id="Unplug.Common.dll" />
+      <ComponentRef Id="Unplug.BusinessLayer.dll" />
+      <ComponentRef Id="Unplug.DataAccess.dll" />
+      <ComponentRef Id="Unplug.Data.xml" />
+      <ComponentRef Id="Serilog.dll" />
+      <ComponentRef Id="Serilog.Sinks.File.dll" />
+
+      <ComponentRef Id="Xceed.Wpf.AvalonDock.dll" />
+      <ComponentRef Id="Xceed.Wpf.AvalonDock.Themes.Aero.dll" />
+      <ComponentRef Id="Xceed.Wpf.AvalonDock.Themes.Metro.dll" />
+      <ComponentRef Id="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" />
+      <ComponentRef Id="Xceed.Wpf.Toolkit.dll" />
+
+      <ComponentRef Id="RegistryEntryForUnplug" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+      <ComponentRef Id="InstallDirCreateFolder" />
+
+    </Feature>
+
+    <DirectoryRef Id="INSTALLDIR">
+      <Component Id="InstallDirCreateFolder" Guid="{2ABC51F4-A14F-4B81-B7B3-2A64A35DCE09}">
+        <CreateFolder>
+          <util:PermissionEx User="Users" GenericAll="yes" />
+        </CreateFolder>
+      </Component>
+    </DirectoryRef>
+
+  </Product>
+</Wix>
