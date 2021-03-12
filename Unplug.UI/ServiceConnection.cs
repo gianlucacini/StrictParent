@@ -10,7 +10,7 @@ namespace Unplug.UI
     {
         public static void Init()
         {
-            var processes = System.Diagnostics.Process.GetProcessesByName("QuitSurf.Service.exe");
+            var processes = System.Diagnostics.Process.GetProcessesByName("Unplug.Service");
 
             if (processes.Length == 0)
                 ManuallyStartQuitSurfService();
