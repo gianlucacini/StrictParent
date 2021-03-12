@@ -1,3 +1,6 @@
+
+![Screenshot 1](https://user-images.githubusercontent.com/20477808/110982902-61c46e00-8369-11eb-8bd1-7b2f1e65aa02.png)
+
 # Unplug By QuitSurf.com
 Unplug is an internet blocker for windows computers.
 
@@ -13,14 +16,9 @@ Unplug is an internet blocker for windows computers.
 - Hard to bypass, but only if you want
 
 ## Install
-go here or here
-
-## Instructions
-click here and here
+Go to the relase page and download the installer. After the installation double click on the newly created icon "Unplug Settings"
 
 ## Why is this free
 I decided to make it free and open source for marketing purposes and also because there are not enough features to justify even a small price. 
 But most of all because i am obviously a selfless god who ascended to earth only to help people like you and don't need food or money to survive.
 jk now if you find this app helpful would you please follow me on social media and subscribe to my mailing list thanks
-
-## Contribute
