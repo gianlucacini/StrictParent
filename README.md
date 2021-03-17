@@ -1,7 +1,7 @@
 
 ![Screenshot 1](https://user-images.githubusercontent.com/20477808/110982902-61c46e00-8369-11eb-8bd1-7b2f1e65aa02.png)
 
-# Unplug By QuitSurf.com
+# Unplug
 Unplug is an internet blocker for windows computers.
 
 ## This app might help you if:
@@ -15,10 +15,37 @@ Unplug is an internet blocker for windows computers.
 - "Lock" your settings for 1 or more days
 - Hard to bypass, but only if you want
 
-## Install
-Go to the relase page and download the installer. After the installation double click on the newly created icon "Unplug Settings"
+## How to Install
+Go to the relase page here 
 
-## Why is this free
-I decided to make it free and open source for marketing purposes and also because there are not enough features to justify even a small price. 
-But most of all because i am obviously a selfless god who ascended to earth only to help people like you and don't need food or money to survive.
-jk now if you find this app helpful would you please follow me on social media and subscribe to my mailing list thanks
+![Release Page](https://github.com/gianlucacini/Unplug/releases)
+
+and download the installer. After the installation double click on the newly created icon "Unplug Settings"
+
+## Thoughts / Advice (may not be applicable to you)
+
+Realize that internet addiction/abuse may not be the cause of your problems, but the symptom.
+
+Just like alcoholism or binge eating, it is a coping mechanism that "helps" you deal with stress, anger, loneliness, anxiety or depression.
+
+Understand that, although an app like this can be helpful, it will not solve the underlying problem. 
+
+## How to overcome an addiction
+
+seek professional help, cognitive-behavioral therapy, counseling, support groups, exercise and clean eating, meditation, spend more time outdoors and less time indoors, sit less and move more, work less and relax more, spend less time by yourself and more time socializing.  
+
+## My phone and pc setup to minimize screen time
+
+if you have a desktop computer, after you are done using it, unplug the power supply chord and put it in something like a kitchen safe (check it out on amazon)
+
+if you have a laptop, you can put it in a laptop bag, lock it with a small padlock and store the key in the kitchen safe (this is not a kitchen safe ad 😅)
+
+I have a laptop and what i do is i simply leave it at my office during the week days, and then use the above method on the week-end.
+
+With regards to your phone, it is a little bit difficult since most people spend all their waking hours on it.
+
+I personally have an android phone with LineageOS installed. The cool thing about it is that you can remove the browser and the app store while still being able to install useful apps like google maps and instant messaging apps like whatsapp or telegram. Removing the app store means that you will not be tempted to download games or video streaming apps. [TBC]
+
+some smartphones like huawei and honor have a "digital balance" feature that limits your phone and app usage which could be an interesting option.
+
+
