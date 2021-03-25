@@ -108,7 +108,8 @@
                 FontSize="14" 
                 Foreground="#333333" 
                 TextWrapping="Wrap" 
-                Text="Unplug is a program that will block all outbound connections for the timespan of your choosing. Meaning that browsers, email, vpn, ftp, ssh and every other thing that uses the internet will not work." />
+                Margin="5"
+                Text="Unplug is a program that will block all outbound connections for the period of time of your choosing. Meaning that browsers, email, vpn, ftp, ssh and every other thing that uses the internet will not work." />
             
 
         </StackPanel>
@@ -119,7 +120,8 @@
                 HorizontalAlignment="Left"
                 Text="Select the Start Time" 
                 Foreground="#333333" 
-                FontSize="14"/>
+                FontWeight="DemiBold"
+                FontSize="16"/>
 
             <xctk:TimePicker 
                 HorizontalAlignment="Left"
@@ -135,9 +137,10 @@
             <TextBlock 
                 HorizontalAlignment="Left"
                 Text="Select the End Time" 
-                Foreground="#333333" 
                 Margin="0 0 15 0" 
-                FontSize="14"/>
+                FontWeight="DemiBold"
+                Foreground="#333333"
+                FontSize="16"/>
 
             <xctk:TimePicker 
                 HorizontalAlignment="Left"
@@ -153,7 +156,8 @@
             <TextBlock 
                 Text="Force me to use the above settings until" 
                 TextWrapping="Wrap" 
-                FontSize="14" 
+                FontSize="16" 
+                FontWeight="DemiBold"
                 Foreground="#333333" />
 
             <DatePicker 
@@ -163,7 +167,8 @@
                 Text="Shut down Windows if the app is killed from the task manager?" 
                 TextWrapping="Wrap" 
                 FontSize="14" 
-                Foreground="#333333" 
+                FontWeight="DemiBold"
+                Foreground="Red" 
                 Margin="0 10 0 10"/>
 
             <RadioButton 
