@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" >
-  <Product Id="{498F286A-0A6B-47FE-9DB6-FF69FA3982FC}" Name="Unplug by QuitSurf" Language="1033" Version="0.90.0.0" Manufacturer="Gianluca Cini" UpgradeCode="c9eef993-f742-480a-a978-18c60de86d68">
+  <Product Id="{498F286A-0A6B-47FE-9DB6-FF69FA3982FC}" Name="Unplug" Language="1033" Version="0.90.0.0" Manufacturer="Gianluca Cini" UpgradeCode="c9eef993-f742-480a-a978-18c60de86d68">
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -22,7 +22,7 @@
         <Component Id="ApplicationShortcutDesktop" Guid="{86EA5281-2BBF-49CA-B101-5087C1675705}">
           <Shortcut Id="ApplicationDesktopShortcut"
               Name="Unplug Settings"
-              Description="Unplug Internet Blocker By QuitSurf"
+              Description="Unplug Internet Blocker"
               Target="[INSTALLDIR]Unplug.UI.exe"
               WorkingDirectory="INSTALLDIR"/>
           <RemoveFolder Id="DesktopFolder" On="uninstall"/>
@@ -57,7 +57,7 @@
       <Component Id="Unplug.Service.exe" Guid="{F0051401-121C-493A-AB06-F6ECF5601CCF}" >
         <File Id="Unplug.Service.exe" Name="Unplug.Service.exe" Source="..\Unplug.Service\bin\Release\" KeyPath="yes" />
         <ServiceInstall Id="ServiceInstaller" Type="ownProcess" Name="Unplug Service" DisplayName="Unplug Service" Vital="yes"
-              Description="Unplug Internet Blocker By QuitSurf" Start="auto" Account="LocalSystem" ErrorControl="normal"/>
+              Description="Unplug Internet Blocker" Start="auto" Account="LocalSystem" ErrorControl="normal"/>
         <ServiceControl Id="StartService" Start="install" Stop="both" Remove="uninstall" Name="Unplug Service" Wait="yes" />
       </Component>
 

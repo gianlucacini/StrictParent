@@ -11,12 +11,16 @@ namespace Unplug.BusinessLayer
     {
         private static string serviceName = "Unplug Service";
 
+        private static string ActualServicePath = "";
+
         public static void RestoreDefaultSettings(Boolean writeToLog)
         {
             if (writeToLog)
                 Log.Information("Restoring Default Registry Settings");
 
             //open registry and read metadata of installed service
+
+            //service user changed
 
             Object objectName = GetRegistryKey(@"SYSTEM\CurrentControlSet\Services\" + serviceName, "ObjectName");
 
@@ -27,6 +31,8 @@ namespace Unplug.BusinessLayer
                 SetRegistryKey(@"SYSTEM\CurrentControlSet\Services\" + serviceName, "ObjectName", "LocalSystem");
             }
 
+            //service start type
+
             Object startType = GetRegistryKey(@"SYSTEM\CurrentControlSet\Services\" + serviceName, "Start");
 
             if ((Int32)startType != 2)
@@ -36,6 +42,19 @@ namespace Unplug.BusinessLayer
                 SetRegistryKey(@"SYSTEM\CurrentControlSet\Services\" + serviceName, "Start", 2);
 
             }
+
+            //service path changed
+
+            Object modifiedServicePath = GetRegistryKey(@"SYSTEM\CurrentControlSet\Services\" + serviceName, "ImagePath");
+
+            if ((String)modifiedServicePath != ActualServicePath)
+            {
+                Log.Information($"Restoring Registry Default Settings: Changing {objectName} back to LocalSystem");
+
+                SetRegistryKey(@"SYSTEM\CurrentControlSet\Services\" + serviceName, "ImagePath", ActualServicePath);
+            }
+
+
         }
 
         static RegistryMonitor RegMonitor = null;
@@ -78,6 +97,10 @@ namespace Unplug.BusinessLayer
                 Log.Error($"No key found for service named {serviceName}");
                 return;
             }
+
+            Object path = GetRegistryKey(@"SYSTEM\CurrentControlSet\Services\" + serviceName, "ImagePath");
+
+            ActualServicePath = (String)path;
 
             RegMonitor = new RegistryMonitor(browserKeys);
             RegMonitor.Error += RegMonitor_Error;

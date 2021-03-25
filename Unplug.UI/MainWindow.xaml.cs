@@ -276,7 +276,7 @@ namespace Unplug.UI
 
         private void ViewInfo_Selected(Object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.quitsurf.com/unplug");
+            System.Diagnostics.Process.Start("https://github.com/gianlucacini/Unplug");
         }
 
         private Boolean InputSettingsAreValid()
