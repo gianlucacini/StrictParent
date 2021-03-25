@@ -171,28 +171,34 @@
                 Foreground="Red" 
                 Margin="0 10 0 10"/>
 
-            <RadioButton 
-                Content="No" 
-                IsChecked="True" 
-                x:Name="ComboCriticalNo" 
-                FontSize="14" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <RadioButton 
+                        Content="No" 
+                        IsChecked="True" 
+                        x:Name="ComboCriticalNo" 
+                        FontSize="14" />
 
-            <RadioButton 
-                Content="Yes" 
-                IsChecked="False" 
-                x:Name="ComboCriticalYes" 
-                FontSize="14" />
-
-            <Button 
-                Content="Save Settings" 
-                HorizontalAlignment="Left" 
-                Width="100" 
-                Margin="0 10 0 0" 
-                FontSize="14" 
-                Height="25" 
-                x:Name="ButtonSaveSettings" 
-                Click="ButtonSaveSettings_Click" 
-                Style="{StaticResource MainTypeButton}"/>
+                    <RadioButton 
+                        Content="Yes" 
+                        IsChecked="False" 
+                        x:Name="ComboCriticalYes" 
+                        FontSize="14" />
+                    
+            </StackPanel>
+            <StackPanel Margin="5">
+                
+                <Button 
+                    HorizontalAlignment="Right"
+                    Content="Save Settings" 
+                    Width="100" 
+                    Margin="0 10 0 0" 
+                    FontSize="14" 
+                    Height="25" 
+                    x:Name="ButtonSaveSettings" 
+                    Click="ButtonSaveSettings_Click" 
+                    Style="{StaticResource MainTypeButton}"/>
+            </StackPanel>
+            
 
         </StackPanel>
 

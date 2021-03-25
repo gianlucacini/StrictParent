@@ -308,7 +308,7 @@ namespace Unplug.UI
                 return false;
             }
 
-            if (RunUntil.SelectedDate.Value < DateTime.Now)
+            if (RunUntil.SelectedDate.Value.Date < DateTime.Now.Date)
             {
                 RunUntil.Focus();
                 MessageBox.Show("end date must be greater than today", "Invalid Settings", MessageBoxButton.OK, MessageBoxImage.Information);
