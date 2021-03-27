@@ -1,7 +1,10 @@
-![unplug](https://user-images.githubusercontent.com/20477808/112717253-b7f9eb00-8eeb-11eb-90ed-a795c8010736.png)
+
+![unplug](https://user-images.githubusercontent.com/20477808/112719151-a7e80880-8ef7-11eb-8f82-c6c1982e2d44.png)
 
 # Unplug
 Unplug is a free, open source internet blocker for windows computers.
+
+Unplug lets you block all outbound connections for the period of time of your choosing. Meaning that browsers, email, vpn, ftp, ssh and every other thing that uses the internet will not work.
 
 ## This app might help you if:
 - You are struggling with any internet related addictions (online gaming, gambling, pornography, video streaming)
@@ -27,7 +30,7 @@ By design, you will find it difficult to uninstall the app, especially while the
 
 You can uninstall Unplug only when the app is not running and by clicking the button in the picture below.
 
-![uninstall unplug](https://user-images.githubusercontent.com/20477808/112717285-ec6da700-8eeb-11eb-8226-2444e1b2c4c6.png)
+![uninstall unplug](https://user-images.githubusercontent.com/20477808/112719153-b0404380-8ef7-11eb-94b4-78defbc323ea.png)
 
 ## Troubleshoot 
 
