@@ -13,11 +13,11 @@ namespace Unplug.UI
             var processes = System.Diagnostics.Process.GetProcessesByName("Unplug.Service");
 
             if (processes.Length == 0)
-                ManuallyStartQuitSurfService();
+                ManuallyStartUnplugService();
 
         }
 
-        private static void ManuallyStartQuitSurfService()
+        private static void ManuallyStartUnplugService()
         {
             try
             {

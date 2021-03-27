@@ -8,11 +8,11 @@ using System.Timers;
 
 namespace Unplug.BusinessLayer
 {
-    public class FirewallJob 
+    public static class FirewallJob 
     {
-        private Timer FirewallTimer;
+        private static Timer FirewallTimer;
 
-        public void Begin()
+        public static void Begin()
         {
             Log.Information("FirewallJob Starting");
 
@@ -30,14 +30,14 @@ namespace Unplug.BusinessLayer
 
         }
 
-        private void FirewallTimer_Elapsed(Object sender, ElapsedEventArgs e)
+        private static void FirewallTimer_Elapsed(Object sender, ElapsedEventArgs e)
         {
             FirewallRule.EnableFirewallIfDown();
             FirewallRule.AllowConnection(false);
             FirewallRule.DenyConnection(false);
         }
 
-        public void End()
+        public static void End()
         {
             Log.Information("FirewallJob Ending");
 

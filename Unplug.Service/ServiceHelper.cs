@@ -16,14 +16,7 @@ namespace Unplug.Service
 {
     public class ServiceHelper
     {
-        static ServiceHelper()
-        {
-            UnplugJob = new UnplugJob();
-        }
-
         static ServiceHost host = null;
-
-        static UnplugJob UnplugJob;
 
         public static void Initialize()
         {
@@ -93,8 +86,9 @@ namespace Unplug.Service
 
             ISettings s = Settings.LoadSettings();
 
+            UnplugJob.End();
+            
             UnplugJob.Begin(s);
-
         }
 
 

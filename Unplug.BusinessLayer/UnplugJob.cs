@@ -9,18 +9,12 @@ using Unplug.Common;
 
 namespace Unplug.BusinessLayer
 {
-    public class UnplugJob
+    public static class UnplugJob
     {
-        Timer UnplugTimer;
-        ISettings _settings;
-        FirewallJob FirewallJob;
+        static Timer UnplugTimer;
+        static ISettings _settings;
 
-        public UnplugJob()
-        {
-            FirewallJob = new FirewallJob();
-        }
-
-        public void Begin(ISettings settings)
+        public static void Begin(ISettings settings)
         {
             Log.Information($"UnplugJob Starting with the following settings: " +
                 $"From = '{settings.UnplugFrom}', " +
@@ -51,7 +45,7 @@ namespace Unplug.BusinessLayer
 
         }
 
-        private void UnplugTimer_Elapsed(Object sender, ElapsedEventArgs e)
+        private static void UnplugTimer_Elapsed(Object sender, ElapsedEventArgs e)
         {
             Log.Information("UnplugJob Elapsed, Checking Status...");
 
@@ -86,7 +80,7 @@ namespace Unplug.BusinessLayer
             UnplugTimer.Start();
         }
 
-        public void End()
+        public static void End()
         {
             Log.Information("UnplugJob Ending");
 

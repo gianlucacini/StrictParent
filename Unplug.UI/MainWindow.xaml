@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:ui="clr-namespace:Unplug.UI"
         mc:Ignorable="d"
-        Title="Unplug by QuitSurf" Height="360" Width="580" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" > 
+        Title="Unplug Internet Blocker" Height="334" Width="580" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" > 
     <Window.Resources>
         <Style TargetType="{x:Type Button}" x:Key="MainTypeButton">
             <Setter Property="Template" >
@@ -77,7 +77,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -105,11 +105,12 @@
             Grid.Column="1"
             Grid.ColumnSpan="2">
             <TextBlock 
-                FontSize="14" 
+                FontSize="24" 
                 Foreground="#333333" 
                 TextWrapping="Wrap" 
+                FontWeight="SemiBold"
                 Margin="5"
-                Text="Unplug is a program that will block all outbound connections for the period of time of your choosing. Meaning that browsers, email, vpn, ftp, ssh and every other thing that uses the internet will not work." />
+                Text="Unplug Internet Blocker" />
             
 
         </StackPanel>
