@@ -1,8 +1,7 @@
-
-![Screenshot 1](https://user-images.githubusercontent.com/20477808/110982902-61c46e00-8369-11eb-8bd1-7b2f1e65aa02.png)
+![unplug](https://user-images.githubusercontent.com/20477808/112717253-b7f9eb00-8eeb-11eb-90ed-a795c8010736.png)
 
 # Unplug
-Unplug is an internet blocker for windows computers.
+Unplug is a free, open source internet blocker for windows computers.
 
 ## This app might help you if:
 - You are struggling with any internet related addictions (online gaming, gambling, pornography, video streaming)
@@ -18,34 +17,52 @@ Unplug is an internet blocker for windows computers.
 ## How to Install
 Go to the relase page here 
 
-![Release Page](https://github.com/gianlucacini/Unplug/releases)
+[Release Page](https://github.com/gianlucacini/Unplug/releases)
 
 and download the installer. After the installation double click on the newly created icon "Unplug Settings"
 
-## Thoughts / Advice (may not be applicable to you)
+## How to uninstall
+
+By design, you will find it difficult to uninstall the app, especially while the app is running.
+
+You can uninstall Unplug only when the app is not running and by clicking the button in the picture below.
+
+![uninstall unplug](https://user-images.githubusercontent.com/20477808/112717285-ec6da700-8eeb-11eb-8226-2444e1b2c4c6.png)
+
+## Troubleshoot 
+
+if you find any bugs, please open an issue here on github and attach the .log file you'll find in your install folder.
+
+## Random Thoughts / Advice (may not be applicable to you)
 
 Realize that internet addiction/abuse may not be the cause of your problems, but the symptom.
 
 Just like alcoholism or binge eating, it is a coping mechanism that "helps" you deal with stress, anger, loneliness, anxiety or depression.
 
-Understand that, although an app like this can be helpful, it will not solve the underlying problem. 
+Understand that, although apps like these can be helpful, they will not solve the underlying problem. 
 
 ## How to overcome an addiction
 
-seek professional help, cognitive-behavioral therapy, counseling, support groups, exercise and clean eating, meditation, spend more time outdoors and less time indoors, sit less and move more, work less and relax more, spend less time by yourself and more time socializing.  
+seek professional help, cognitive-behavioral therapy, counseling, support groups, exercise and clean eating, meditation, spend more time outdoors and less time indoors, sit less and move more, work less and relax more, spend less time by yourself and more time with people.  
 
-## My phone and pc setup to minimize screen time
+## Phone and PC setup to minimize internet use and reduce time spent in front of a screen
 
 if you have a desktop computer, after you are done using it, unplug the power supply chord and put it in something like a kitchen safe (check it out on amazon)
 
-if you have a laptop, you can put it in a laptop bag, lock it with a small padlock and store the key in the kitchen safe (this is not a kitchen safe ad 😅)
+if you have a laptop, you can put it in a laptop bag, lock it with a small padlock and store the key in the kitchen safe (this is not a kitchen safe ad I swear 😅)
 
 I have a laptop and what i do is i simply leave it at my office during the week days, and then use the above method on the week-end.
 
 With regards to your phone, it is a little bit difficult since most people spend all their waking hours on it.
 
-I personally have an android phone with LineageOS installed. The cool thing about it is that you can remove the browser and the app store while still being able to install useful apps like google maps and instant messaging apps like whatsapp or telegram. Removing the app store means that you will not be tempted to download games or video streaming apps. [TBC]
+I personally have an android phone with LineageOS installed. The cool thing about it is that you can remove the browser and the app store while still being able to install useful apps like google maps, whatsapp, telegram... 
 
-some smartphones like huawei and honor have a "digital balance" feature that limits your phone and app usage which could be an interesting option.
+Removing the app store means that you will not be tempted to download games or video streaming apps. You can still install apps by connecting the phone to a computer and download the apks. It will be more difficult, but that's the point.
 
+In my opionion, installing LineageOS is the best option, but it's difficult and risky to set up. It took me three days and i almost bricked my phone twice.
 
+Other options include: using old school cellphones (or dumbphones as they call them), the light phone, mudita phone or using phones with KaiOS as operating system (although i don't like them)
+
+Also, smartphone brands like huawei and honor have a "digital balance" feature that limits your phone and app usage which could be an interesting option, although i never tried.
+
+At last, you can checkout [reddit/r/dumbphones](https://www.reddit.com/r/dumbphones/) to find a solution that suits best for you.
